@@ -1,0 +1,918 @@
+
+==================== FINAL INTERFACE ====================
+2017-06-13 15:00:51.774965 UTC
+
+interface main@main:Main 8002
+  interface hash: 664e684514681a0dae0443efae0ff617
+  ABI hash: 4f43f270dbeb235ad9095294b9d4c6d4
+  export-list hash: 2cc15ffecf4894ccd64387510849740c
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: a05770ac8b7c9f08840ec1c9285483a5
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.config
+  Main.main
+  Main.main'
+  Main.stdoutOrFile
+  Main.Command{Main.GenerateDot Main.GenerateHTML Main.ShowAST Main.ShowTokens}
+  Main.Config{Main.Config infile optCommand outfile}
+module dependencies:
+package dependencies: ansi-terminal-0.6.2.3@ansi-terminal-0.6.2.3-4HPxin1iv6RAndS8lH3nzo
+                      ansi-wl-pprint-0.6.7.3@ansi-wl-pprint-0.6.7.3-3GSHFrIr1fs45bsgKkZbLF
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.1.0*
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 directory-1.3.0.0@directory-1.3.0.0
+                      filepath-1.4.1.1@filepath-1.4.1.1 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+                      md2html-0.1.0.0@md2html-0.1.0.0-262ulUAMmGV5hmWW08dDOC
+                      optparse-applicative-0.13.2.0@optparse-applicative-0.13.2.0-34EUj6Bj0pDLtYR0AoQs8j
+                      process-1.4.3.0@process-1.4.3.0 time-1.6.0.1@time-1.6.0.1
+                      transformers-0.5.2.0@transformers-0.5.2.0 unix-2.7.2.1@unix-2.7.2.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Control.Applicative 32430a90492e727f4bd80db71c28600c
+import  -/  base-4.9.1.0:Data.Functor 5ab1dc703df5b482e77efb697833ca3c
+import  -/  base-4.9.1.0:Data.Maybe d876c4ffe4b3c43755a781e8ad860d88
+import  -/  base-4.9.1.0:Data.Semigroup fc55c71ff629dcbd821309c310055959
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.IO eb504c57b397cf133849f8586f15dafb
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:System.IO e4a64a8e3dce8616da54f0ee7104f7db
+import  -/  directory-1.3.0.0@directory-1.3.0.0:System.Directory 8ff5ebd6a93811413df021d2be39a158
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+import  -/  md2html-0.1.0.0@md2html-0.1.0.0-262ulUAMmGV5hmWW08dDOC:DotGen 52911a55b3c1169881dfd1a78de7c243
+import  -/  md2html-0.1.0.0@md2html-0.1.0.0-262ulUAMmGV5hmWW08dDOC:HTMLGen 28d68b1282d9620c05a1ada75f7faf5e
+import  -/  md2html-0.1.0.0@md2html-0.1.0.0-262ulUAMmGV5hmWW08dDOC:Parser 25f3ad8ac5a84876dee81caf6d418749
+import  -/  md2html-0.1.0.0@md2html-0.1.0.0-262ulUAMmGV5hmWW08dDOC:Scanner b65aa42cd0131490c3cf97ce7e947641
+import  -/  optparse-applicative-0.13.2.0@optparse-applicative-0.13.2.0-34EUj6Bj0pDLtYR0AoQs8j:Options.Applicative 3b2110c868e49e0d86cded098f24e0d2
+import  -/  optparse-applicative-0.13.2.0@optparse-applicative-0.13.2.0-34EUj6Bj0pDLtYR0AoQs8j:Options.Applicative.Builder cddcfb07a988339795d2e38d4387ac76
+import  -/  optparse-applicative-0.13.2.0@optparse-applicative-0.13.2.0-34EUj6Bj0pDLtYR0AoQs8j:Options.Applicative.Extra 149b9f0d4c43ee9476133f84e028bc40
+db0fc07a0fe5fe6571e1777529b8aad8
+  $fEqCommand :: GHC.Classes.Eq Main.Command
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Command Main.$fEqCommand_$c== Main.$fEqCommand_$c/= -}
+db0fc07a0fe5fe6571e1777529b8aad8
+  $fEqCommand_$c/= :: Main.Command -> Main.Command -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: Main.Command) (b :: Main.Command) ->
+                 case a of wild {
+                   Main.ShowTokens
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Main.ShowTokens -> GHC.Types.False }
+                   Main.ShowAST
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Main.ShowAST -> GHC.Types.False }
+                   Main.GenerateHTML
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Main.GenerateHTML -> GHC.Types.False }
+                   Main.GenerateDot
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Main.GenerateDot -> GHC.Types.False } }) -}
+db0fc07a0fe5fe6571e1777529b8aad8
+  $fEqCommand_$c== :: Main.Command -> Main.Command -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (ds :: Main.Command) (ds1 :: Main.Command) ->
+                 case ds of wild {
+                   Main.ShowTokens
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Main.ShowTokens -> GHC.Types.True }
+                   Main.ShowAST
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Main.ShowAST -> GHC.Types.True }
+                   Main.GenerateHTML
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Main.GenerateHTML -> GHC.Types.True }
+                   Main.GenerateDot
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Main.GenerateDot -> GHC.Types.True } }) -}
+b1599786f6a5e0fad673298d41b6890a
+  $tc'Config :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13962199606615330037##
+                   485662072764088247##
+                   Main.$trModule
+                   Main.$tc'Config1) -}
+2506aee8c5d5b9557eaa1ee66f7780ca
+  $tc'Config1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Config"#) -}
+7791fcff411f1d9a1508ab02fe912564
+  $tc'GenerateDot :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10300857326034313732##
+                   10268926110015831659##
+                   Main.$trModule
+                   Main.$tc'GenerateDot1) -}
+85a317a4277390d3d3170d1e7e738ea6
+  $tc'GenerateDot1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'GenerateDot"#) -}
+b703e257ff40299f9f1636ff9ace12e3
+  $tc'GenerateHTML :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7136420060544770659##
+                   2211930040888694884##
+                   Main.$trModule
+                   Main.$tc'GenerateHTML1) -}
+67da426f445bab314af67442373e5f67
+  $tc'GenerateHTML1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'GenerateHTML"#) -}
+7fa5bcaf9d56a90d1193876281a41bda
+  $tc'ShowAST :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4846168136953611501##
+                   478309111911527608##
+                   Main.$trModule
+                   Main.$tc'ShowAST1) -}
+b3ccd5d929bf1fc7794ddd48a0e45af1
+  $tc'ShowAST1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'ShowAST"#) -}
+5e4d119f3a51a8dd5cac74bafcb40f78
+  $tc'ShowTokens :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8444071314674737452##
+                   2661668301999308275##
+                   Main.$trModule
+                   Main.$tc'ShowTokens1) -}
+4cbfcae1de37ea9f93ecf5df212f88d3
+  $tc'ShowTokens1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'ShowTokens"#) -}
+b3f9b948226c383f001ad6253bb6043f
+  $tcCommand :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2299227943555641831##
+                   10040856767533020848##
+                   Main.$trModule
+                   Main.$tcCommand1) -}
+5b4ba384816629152654a8eef340315c
+  $tcCommand1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Command"#) -}
+47bde6285b5739a215983fa4f91c843c
+  $tcConfig :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4353537318565338662##
+                   2418309960843942405##
+                   Main.$trModule
+                   Main.$tcConfig1) -}
+6b655a205f2cd8f3858cc830cb465e6c
+  $tcConfig1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Config"#) -}
+d6831ef04cb9301b090dfae6f7bb7ec7
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule2 Main.$trModule1) -}
+847d9fc3b8e6f0b424199f36b4999bb2
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Main"#) -}
+24ef6042833e75ffd7aa98b83ecca98d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+db0fc07a0fe5fe6571e1777529b8aad8
+  data Command = ShowTokens | ShowAST | GenerateHTML | GenerateDot
+ab13c62cc99cc3f31fd6ebd4be453b9e
+  data Config
+    = Config {optCommand :: Main.Command,
+              outfile :: GHC.Base.Maybe GHC.IO.FilePath,
+              infile :: GHC.IO.FilePath}
+d0268f1919f21f5bd4774cd65e5c197d
+  config :: Options.Applicative.Types.Parser Main.Config
+  {- Unfolding: (Options.Applicative.Types.MultP
+                   @ Main.Config
+                   @ GHC.IO.FilePath
+                   Main.config8
+                   Main.config1) -}
+039f8e9a183ebdf6777267700c46bcd0
+  config1 :: Options.Applicative.Types.Parser GHC.Base.String
+  {- Strictness: m4,
+     Unfolding: (Options.Applicative.Types.AltP
+                   @ GHC.Base.String
+                   Main.config2
+                   (Options.Applicative.Types.$fAlternativeParser_$cempty
+                      @ GHC.Base.String)) -}
+738f608729fb99e5fe406ecc370aed4d
+  config10 ::
+    Options.Applicative.Types.Parser (GHC.Base.Maybe GHC.Base.String)
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Options.Applicative.Types.NilP
+                   @ (GHC.Base.Maybe GHC.Base.String)
+                   Main.config11) -}
+a203a48ba46850df8749a25806d180ad
+  config11 :: GHC.Base.Maybe (GHC.Base.Maybe GHC.Base.String)
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ (GHC.Base.Maybe GHC.Base.String)
+                   (GHC.Base.Nothing @ GHC.Base.String)) -}
+3da2bc5b0facc87c18f057900a7c7304
+  config12 ::
+    Options.Applicative.Types.Parser (GHC.Base.Maybe GHC.Base.String)
+  {- Unfolding: (Options.Applicative.Types.$fApplicativeParser_$cfmap
+                   @ GHC.Base.String
+                   @ (GHC.Base.Maybe GHC.Base.String)
+                   (GHC.Base.Just @ GHC.Base.String)
+                   Main.config13) -}
+d12671a80ce60844266bad944035f653
+  config13 :: Options.Applicative.Types.Parser GHC.Base.String
+  {- Unfolding: (Options.Applicative.Types.AltP
+                   @ GHC.Base.String
+                   Main.config14
+                   (Options.Applicative.Types.$fAlternativeParser_$cempty
+                      @ GHC.Base.String)) -}
+d97a844a03c4799594f10debecc7f782
+  config14 :: Options.Applicative.Types.Parser GHC.Base.String
+  {- Unfolding: (Options.Applicative.Types.OptP
+                   @ GHC.Base.String
+                   Main.config15) -}
+fec481979dfcd2deb83ac91644408d9b
+  config15 :: Options.Applicative.Types.Option GHC.Base.String
+  {- Strictness: m,
+     Unfolding: (Options.Applicative.Types.Option
+                   @ GHC.Base.String
+                   Main.config18
+                   Main.config16) -}
+de16524cb544bd7d1d1499be21ccd459
+  config16 :: Options.Applicative.Types.OptProperties
+  {- Strictness: m,
+     Unfolding: (Options.Applicative.Types.OptProperties
+                   Options.Applicative.Types.Visible
+                   Main.config_lvl1
+                   Main.config_var1
+                   (GHC.Base.Nothing @ GHC.Base.String)) -}
+e742941be43f3fbfb13fd8d087875339
+  config17 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Ausgabe in Datei umleiten"#) -}
+6cd8e0d8f3ea4c39aca337a67cd12605
+  config18 :: Options.Applicative.Types.OptReader GHC.Base.String
+  {- Strictness: m1,
+     Unfolding: (Options.Applicative.Types.OptReader
+                   @ GHC.Base.String
+                   Main.config19
+                   Main.config7
+                   Options.Applicative.Builder.abortOption3) -}
+c78bc6c21123bca8aec74ff18a00218b
+  config19 :: [Options.Applicative.Types.OptName]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Options.Applicative.Types.OptName
+                   Main.config_n1
+                   Main.config20) -}
+6d845db2863fa70d24b724f77b7633a5
+  config2 :: Options.Applicative.Types.Parser GHC.Base.String
+  {- Strictness: m2,
+     Unfolding: (Options.Applicative.Types.OptP
+                   @ GHC.Base.String
+                   Main.config3) -}
+ceaa949bd74cd6038a2c78231d740bf9
+  config20 :: [Options.Applicative.Types.OptName]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Options.Applicative.Types.OptName
+                   Main.config_n
+                   (GHC.Types.[] @ Options.Applicative.Types.OptName)) -}
+3737ae8d6e0225a6990c21708e38b1f3
+  config21 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# "output"#) -}
+15f8f98554bdd0b10cd45cff10b5d67e
+  config22 ::
+    Options.Applicative.Types.Parser
+      (GHC.Base.Maybe GHC.IO.FilePath -> GHC.IO.FilePath -> Main.Config)
+  {- Unfolding: (Options.Applicative.Types.$fApplicativeParser_$cfmap
+                   @ Main.Command
+                   @ (GHC.Base.Maybe GHC.IO.FilePath
+                      -> GHC.IO.FilePath -> Main.Config)
+                   Main.Config
+                   Main.config23) -}
+d85d74f98f97946ccafccc8b727cfaff
+  config23 :: Options.Applicative.Types.Parser Main.Command
+  {- Unfolding: (Options.Applicative.Types.AltP
+                   @ Main.Command
+                   Main.config24
+                   (Options.Applicative.Types.$fAlternativeParser_$cempty
+                      @ Main.Command)) -}
+caf1d458362e03ecfc900e2b02975eef
+  config24 :: Options.Applicative.Types.Parser Main.Command
+  {- Unfolding: (Options.Applicative.Types.OptP
+                   @ Main.Command
+                   Main.config25) -}
+eb3cb0fec510b366f26bc9c54ce1212f
+  config25 :: Options.Applicative.Types.Option Main.Command
+  {- Strictness: m,
+     Unfolding: (Options.Applicative.Types.Option
+                   @ Main.Command
+                   Main.config27
+                   Main.config26) -}
+ef21cc9af5a4c51fd2a6c3ae0beea946
+  config26 :: Options.Applicative.Types.OptProperties
+  {- Strictness: m,
+     Unfolding: (Options.Applicative.Types.OptProperties
+                   Options.Applicative.Types.Visible
+                   (GHC.Base.Nothing @ Text.PrettyPrint.ANSI.Leijen.Doc)
+                     `cast`
+                   (Sym (Options.Applicative.Help.Chunk.N:Chunk[0]) <Text.PrettyPrint.ANSI.Leijen.Doc>_N)
+                   Options.Applicative.Extra.hsubparser_var
+                   (GHC.Base.Nothing @ GHC.Base.String)) -}
+ed6fc66f146f87ab1f4d6f09e4e619a1
+  config27 :: Options.Applicative.Types.OptReader Main.Command
+  {- Strictness: m4,
+     Unfolding: (Options.Applicative.Types.CmdReader
+                   @ Main.Command
+                   (GHC.Base.Nothing @ GHC.Base.String)
+                   Main.config45
+                   Main.config28) -}
+ca2a2a6acade81582eccdbf4f224de15
+  config28 ::
+    GHC.Base.String
+    -> GHC.Base.Maybe
+         (Options.Applicative.Types.ParserInfo Main.Command)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (x :: GHC.Base.String) ->
+                 case GHC.List.lookup
+                        @ GHC.Base.String
+                        @ (Options.Applicative.Types.ParserInfo Main.Command)
+                        GHC.Classes.$fEq[]_$s$fEq[]1
+                        x
+                        Main.config29 of wild {
+                   GHC.Base.Nothing
+                   -> GHC.Base.Nothing
+                        @ (Options.Applicative.Types.ParserInfo Main.Command)
+                   GHC.Base.Just x1
+                   -> GHC.Base.Just
+                        @ (Options.Applicative.Types.ParserInfo Main.Command)
+                        (case x1 of wild1 { Options.Applicative.Types.ParserInfo ds1 ds2 ds3 ds4 ds5 ds6 ds7 ->
+                         Options.Applicative.Types.ParserInfo
+                           @ Main.Command
+                           (Options.Applicative.Types.MultP
+                              @ Main.Command
+                              @ (Main.Command -> Main.Command)
+                              (Options.Applicative.Types.$fApplicativeParser_$cfmap
+                                 @ Main.Command
+                                 @ ((Main.Command -> Main.Command) -> Main.Command)
+                                 (GHC.Base.<**>1 @ Main.Command @ Main.Command)
+                                 ds1)
+                              (Options.Applicative.Extra.helper @ Main.Command))
+                           ds2
+                           ds3
+                           ds4
+                           ds5
+                           ds6
+                           ds7 }) }) -}
+a9f5f6b5a0e2b076be23dd3621a72add
+  config29 ::
+    [(GHC.Base.String,
+      Options.Applicative.Types.ParserInfo Main.Command)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      Options.Applicative.Types.ParserInfo Main.Command)
+                   Main.config_lvl9
+                   Main.config30) -}
+512cbf890c9cb11df04f9cc63982ab52
+  config3 :: Options.Applicative.Types.Option GHC.Base.String
+  {- Strictness: m,
+     Unfolding: (Options.Applicative.Types.Option
+                   @ GHC.Base.String
+                   Main.config6
+                   Main.config4) -}
+a893bbe447e1fb496c4256b8c2960256
+  config30 ::
+    [(GHC.Base.String,
+      Options.Applicative.Types.ParserInfo Main.Command)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      Options.Applicative.Types.ParserInfo Main.Command)
+                   Main.config_lvl6
+                   Main.config31) -}
+a1a741f3e9389c23d48d06b429494f82
+  config31 ::
+    [(GHC.Base.String,
+      Options.Applicative.Types.ParserInfo Main.Command)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      Options.Applicative.Types.ParserInfo Main.Command)
+                   Main.config_lvl4
+                   Main.config32) -}
+a51ff023f8e3be4b481b9a89fbb05058
+  config32 ::
+    [(GHC.Base.String,
+      Options.Applicative.Types.ParserInfo Main.Command)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      Options.Applicative.Types.ParserInfo Main.Command)
+                   Main.config_lvl2
+                   (GHC.Types.[]
+                      @ (GHC.Base.String,
+                         Options.Applicative.Types.ParserInfo Main.Command))) -}
+4c336a1921d3db9f38903ae8c16fb23c
+  config33 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "gescannte Tokens ausgeben"#) -}
+4147d15f19eef5ba72447f8894af0d1d
+  config34 :: Options.Applicative.Types.Parser Main.Command
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Options.Applicative.Types.NilP
+                   @ Main.Command
+                   Main.config35) -}
+f6063b323058c70302f6ad3e1343fbad
+  config35 :: GHC.Base.Maybe Main.Command
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just @ Main.Command Main.ShowTokens) -}
+afbc6689730c706a9f31f46c6cd71658
+  config36 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "durch den Parser erzeugten AST ausgeben"#) -}
+da801f0d7aa1b8ebc305f480e31e2e66
+  config37 :: Options.Applicative.Types.Parser Main.Command
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Options.Applicative.Types.NilP
+                   @ Main.Command
+                   Main.config38) -}
+a0c4d803b30d06a852c848f234b3fa4e
+  config38 :: GHC.Base.Maybe Main.Command
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just @ Main.Command Main.ShowAST) -}
+40ec5f712c1225da18cba46aa3b9684f
+  config39 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "HTML erzeugen"#) -}
+d3c6c9d4df74b42659b075f336756753
+  config4 :: Options.Applicative.Types.OptProperties
+  {- Strictness: m,
+     Unfolding: (Options.Applicative.Types.OptProperties
+                   Options.Applicative.Types.Visible
+                   Main.config_lvl8
+                   Main.config_var
+                   (GHC.Base.Nothing @ GHC.Base.String)) -}
+ac97ddddf54b850caf0281f814fa900f
+  config40 :: Options.Applicative.Types.Parser Main.Command
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Options.Applicative.Types.NilP
+                   @ Main.Command
+                   Main.config41) -}
+3b6cb26db0a531ba76af2f120e412ae6
+  config41 :: GHC.Base.Maybe Main.Command
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just @ Main.Command Main.GenerateHTML) -}
+92030424ea051934a60b5ebd86dbbc5e
+  config42 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "AST in dot-Syntax ausgeben"#) -}
+b6a0ac2919fc410f30dd036f749ad05d
+  config43 :: Options.Applicative.Types.Parser Main.Command
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Options.Applicative.Types.NilP
+                   @ Main.Command
+                   Main.config44) -}
+a4f5c47f5a722cca335e78683f0a747a
+  config44 :: GHC.Base.Maybe Main.Command
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just @ Main.Command Main.GenerateDot) -}
+bb59d494bbeaecb37c65e0726ac13d52
+  config45 :: [[GHC.Types.Char]]
+  {- Unfolding: (GHC.Base.map
+                   @ (GHC.Base.String,
+                      Options.Applicative.Types.ParserInfo Main.Command)
+                   @ [GHC.Types.Char]
+                   (Data.Tuple.fst
+                      @ GHC.Base.String
+                      @ (Options.Applicative.Types.ParserInfo Main.Command))
+                   Main.config29) -}
+8cefd6ba23730f42b37297a4b0a3538f
+  config5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Quell-Datei im Markdown-Format"#) -}
+2117534cb177ecc4cd9656d4d3652d9e
+  config6 :: Options.Applicative.Types.OptReader GHC.Base.String
+  {- HasNoCafRefs, Strictness: m3,
+     Unfolding: (Options.Applicative.Types.ArgReader
+                   @ GHC.Base.String
+                   Main.config7) -}
+e1f39032e7e170d1f4fd65502ec0226a
+  config7 :: Options.Applicative.Types.CReader GHC.Base.String
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Options.Applicative.Types.CReader
+                   @ GHC.Base.String
+                   Options.Applicative.Types.$fMonoidCompleter4
+                     `cast`
+                   (Trans
+                        (<GHC.Base.String>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <[GHC.Base.String]>_R))
+                        (Sym (Options.Applicative.Types.N:Completer[0])))
+                   (Data.Either.Right
+                      @ Options.Applicative.Types.ParseError
+                      @ GHC.Base.String)
+                     `cast`
+                   (Trans
+                        (<GHC.Base.String>_R
+                         ->_R Trans
+                                  (Sym (Data.Functor.Identity.N:Identity[0]
+                                            <Data.Either.Either
+                                               Options.Applicative.Types.ParseError
+                                               GHC.Base.String>_R))
+                                  (Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                            <Options.Applicative.Types.ParseError>_N
+                                            <Data.Functor.Identity.Identity>_R
+                                            <GHC.Base.String>_N)))
+                        (Trans
+                             (Sym (Control.Monad.Trans.Reader.N:ReaderT[0]
+                                       <*>_N
+                                       <GHC.Base.String>_R
+                                       <Control.Monad.Trans.Except.Except
+                                          Options.Applicative.Types.ParseError>_R
+                                       <GHC.Base.String>_N))
+                             (Sym (Options.Applicative.Types.N:ReadM[0]) <GHC.Base.String>_N)))) -}
+baefd245f92ce82ee12e4ac4c0de6e72
+  config8 ::
+    Options.Applicative.Types.Parser (GHC.IO.FilePath -> Main.Config)
+  {- Unfolding: (Options.Applicative.Types.MultP
+                   @ (GHC.IO.FilePath -> Main.Config)
+                   @ (GHC.Base.Maybe GHC.IO.FilePath)
+                   Main.config22
+                   Main.config9) -}
+88f0c4da8831c22742d1f69c310363d1
+  config9 ::
+    Options.Applicative.Types.Parser (GHC.Base.Maybe GHC.Base.String)
+  {- Strictness: m4,
+     Unfolding: (Options.Applicative.Types.AltP
+                   @ (GHC.Base.Maybe GHC.Base.String)
+                   Main.config12
+                   Main.config10) -}
+3c2e3e1ca64de4a11729d4834c97da3b
+  config_cmd :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# "tokens"#) -}
+a2ec3a552f4e216e4451eb85b0905b82
+  config_cmd1 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# "ast"#) -}
+47478abf125e8e4af9e7bd6f2c92a7bb
+  config_cmd2 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# "html"#) -}
+daca4caff9b6ad189deb5026dcfbca17
+  config_cmd3 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# "dot"#) -}
+b2fc0776e25225c21a6571583549bab6
+  config_lvl1 ::
+    Options.Applicative.Help.Chunk.Chunk
+      Text.PrettyPrint.ANSI.Leijen.Doc
+  {- Unfolding: (Data.OldList.wordsFB
+                   @ (Options.Applicative.Help.Chunk.Chunk
+                        Text.PrettyPrint.ANSI.Leijen.Doc)
+                   Options.Applicative.Help.Chunk.paragraph1
+                   (GHC.Base.Nothing @ Text.PrettyPrint.ANSI.Leijen.Doc)
+                     `cast`
+                   (Sym (Options.Applicative.Help.Chunk.N:Chunk[0]) <Text.PrettyPrint.ANSI.Leijen.Doc>_N)
+                   Main.config17) -}
+840d100b58e0b9ab36260b25497ed9a1
+  config_lvl10 ::
+    Options.Applicative.Help.Chunk.Chunk
+      Text.PrettyPrint.ANSI.Leijen.Doc
+  {- Unfolding: (Data.OldList.wordsFB
+                   @ (Options.Applicative.Help.Chunk.Chunk
+                        Text.PrettyPrint.ANSI.Leijen.Doc)
+                   Options.Applicative.Help.Chunk.paragraph1
+                   (GHC.Base.Nothing @ Text.PrettyPrint.ANSI.Leijen.Doc)
+                     `cast`
+                   (Sym (Options.Applicative.Help.Chunk.N:Chunk[0]) <Text.PrettyPrint.ANSI.Leijen.Doc>_N)
+                   Main.config42) -}
+5ee4357854938a6c88ae330b18b578de
+  config_lvl2 ::
+    (GHC.Base.String,
+     Options.Applicative.Types.ParserInfo Main.Command)
+  {- Strictness: m,
+     Unfolding: ((Main.config_cmd, Main.config_pinfo)) -}
+8b256f10e8960508e506003f2e508167
+  config_lvl3 ::
+    Options.Applicative.Help.Chunk.Chunk
+      Text.PrettyPrint.ANSI.Leijen.Doc
+  {- Unfolding: (Data.OldList.wordsFB
+                   @ (Options.Applicative.Help.Chunk.Chunk
+                        Text.PrettyPrint.ANSI.Leijen.Doc)
+                   Options.Applicative.Help.Chunk.paragraph1
+                   (GHC.Base.Nothing @ Text.PrettyPrint.ANSI.Leijen.Doc)
+                     `cast`
+                   (Sym (Options.Applicative.Help.Chunk.N:Chunk[0]) <Text.PrettyPrint.ANSI.Leijen.Doc>_N)
+                   Main.config33) -}
+e81e9b7e11455fd5241df5ae7216fa48
+  config_lvl4 ::
+    (GHC.Base.String,
+     Options.Applicative.Types.ParserInfo Main.Command)
+  {- Strictness: m,
+     Unfolding: ((Main.config_cmd1, Main.config_pinfo1)) -}
+c8d17091f8fc6ab42440b112d8c647e0
+  config_lvl5 ::
+    Options.Applicative.Help.Chunk.Chunk
+      Text.PrettyPrint.ANSI.Leijen.Doc
+  {- Unfolding: (Data.OldList.wordsFB
+                   @ (Options.Applicative.Help.Chunk.Chunk
+                        Text.PrettyPrint.ANSI.Leijen.Doc)
+                   Options.Applicative.Help.Chunk.paragraph1
+                   (GHC.Base.Nothing @ Text.PrettyPrint.ANSI.Leijen.Doc)
+                     `cast`
+                   (Sym (Options.Applicative.Help.Chunk.N:Chunk[0]) <Text.PrettyPrint.ANSI.Leijen.Doc>_N)
+                   Main.config36) -}
+ae6d2a70b012c0163e9cb3a242b88f44
+  config_lvl6 ::
+    (GHC.Base.String,
+     Options.Applicative.Types.ParserInfo Main.Command)
+  {- Strictness: m,
+     Unfolding: ((Main.config_cmd2, Main.config_pinfo2)) -}
+c0a7f857e525f3e05ddaf2407ac3730d
+  config_lvl7 ::
+    Options.Applicative.Help.Chunk.Chunk
+      Text.PrettyPrint.ANSI.Leijen.Doc
+  {- Unfolding: (Data.OldList.wordsFB
+                   @ (Options.Applicative.Help.Chunk.Chunk
+                        Text.PrettyPrint.ANSI.Leijen.Doc)
+                   Options.Applicative.Help.Chunk.paragraph1
+                   (GHC.Base.Nothing @ Text.PrettyPrint.ANSI.Leijen.Doc)
+                     `cast`
+                   (Sym (Options.Applicative.Help.Chunk.N:Chunk[0]) <Text.PrettyPrint.ANSI.Leijen.Doc>_N)
+                   Main.config39) -}
+eb26a8432fe09e24cc9189b8720cde1f
+  config_lvl8 ::
+    Options.Applicative.Help.Chunk.Chunk
+      Text.PrettyPrint.ANSI.Leijen.Doc
+  {- Unfolding: (Data.OldList.wordsFB
+                   @ (Options.Applicative.Help.Chunk.Chunk
+                        Text.PrettyPrint.ANSI.Leijen.Doc)
+                   Options.Applicative.Help.Chunk.paragraph1
+                   (GHC.Base.Nothing @ Text.PrettyPrint.ANSI.Leijen.Doc)
+                     `cast`
+                   (Sym (Options.Applicative.Help.Chunk.N:Chunk[0]) <Text.PrettyPrint.ANSI.Leijen.Doc>_N)
+                   Main.config5) -}
+8e3109272440ab020ef21b2827b6391c
+  config_lvl9 ::
+    (GHC.Base.String,
+     Options.Applicative.Types.ParserInfo Main.Command)
+  {- Strictness: m,
+     Unfolding: ((Main.config_cmd3, Main.config_pinfo3)) -}
+4b5f1449fefcccd2a42b81e2cecfa3d8
+  config_n :: Options.Applicative.Types.OptName
+  {- Strictness: m2,
+     Unfolding: (Options.Applicative.Types.OptLong Main.config21) -}
+33404cdc7090d15945c80028fbe5272f
+  config_n1 :: Options.Applicative.Types.OptName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Options.Applicative.Types.OptShort 'o'#) -}
+ad60cece729dcd483ab505b8a17f3854
+  config_pinfo :: Options.Applicative.Types.ParserInfo Main.Command
+  {- Strictness: m,
+     Unfolding: (Options.Applicative.Types.ParserInfo
+                   @ Main.Command
+                   Main.config34
+                   GHC.Types.True
+                   Main.config_lvl3
+                   (GHC.Base.Nothing @ Text.PrettyPrint.ANSI.Leijen.Doc)
+                     `cast`
+                   (Sym (Options.Applicative.Help.Chunk.N:Chunk[0]) <Text.PrettyPrint.ANSI.Leijen.Doc>_N)
+                   (GHC.Base.Nothing @ Text.PrettyPrint.ANSI.Leijen.Doc)
+                     `cast`
+                   (Sym (Options.Applicative.Help.Chunk.N:Chunk[0]) <Text.PrettyPrint.ANSI.Leijen.Doc>_N)
+                   Options.Applicative.Builder.info1
+                   GHC.Types.True) -}
+1759b7920efcadc362912b1b268d07eb
+  config_pinfo1 :: Options.Applicative.Types.ParserInfo Main.Command
+  {- Strictness: m,
+     Unfolding: (Options.Applicative.Types.ParserInfo
+                   @ Main.Command
+                   Main.config37
+                   GHC.Types.True
+                   Main.config_lvl5
+                   (GHC.Base.Nothing @ Text.PrettyPrint.ANSI.Leijen.Doc)
+                     `cast`
+                   (Sym (Options.Applicative.Help.Chunk.N:Chunk[0]) <Text.PrettyPrint.ANSI.Leijen.Doc>_N)
+                   (GHC.Base.Nothing @ Text.PrettyPrint.ANSI.Leijen.Doc)
+                     `cast`
+                   (Sym (Options.Applicative.Help.Chunk.N:Chunk[0]) <Text.PrettyPrint.ANSI.Leijen.Doc>_N)
+                   Options.Applicative.Builder.info1
+                   GHC.Types.True) -}
+bd339641e60dd4df60740a83e0c6504e
+  config_pinfo2 :: Options.Applicative.Types.ParserInfo Main.Command
+  {- Strictness: m,
+     Unfolding: (Options.Applicative.Types.ParserInfo
+                   @ Main.Command
+                   Main.config40
+                   GHC.Types.True
+                   Main.config_lvl7
+                   (GHC.Base.Nothing @ Text.PrettyPrint.ANSI.Leijen.Doc)
+                     `cast`
+                   (Sym (Options.Applicative.Help.Chunk.N:Chunk[0]) <Text.PrettyPrint.ANSI.Leijen.Doc>_N)
+                   (GHC.Base.Nothing @ Text.PrettyPrint.ANSI.Leijen.Doc)
+                     `cast`
+                   (Sym (Options.Applicative.Help.Chunk.N:Chunk[0]) <Text.PrettyPrint.ANSI.Leijen.Doc>_N)
+                   Options.Applicative.Builder.info1
+                   GHC.Types.True) -}
+217f56adde79a54d58896e93a9a82641
+  config_pinfo3 :: Options.Applicative.Types.ParserInfo Main.Command
+  {- Strictness: m,
+     Unfolding: (Options.Applicative.Types.ParserInfo
+                   @ Main.Command
+                   Main.config43
+                   GHC.Types.True
+                   Main.config_lvl10
+                   (GHC.Base.Nothing @ Text.PrettyPrint.ANSI.Leijen.Doc)
+                     `cast`
+                   (Sym (Options.Applicative.Help.Chunk.N:Chunk[0]) <Text.PrettyPrint.ANSI.Leijen.Doc>_N)
+                   (GHC.Base.Nothing @ Text.PrettyPrint.ANSI.Leijen.Doc)
+                     `cast`
+                   (Sym (Options.Applicative.Help.Chunk.N:Chunk[0]) <Text.PrettyPrint.ANSI.Leijen.Doc>_N)
+                   Options.Applicative.Builder.info1
+                   GHC.Types.True) -}
+195f7e5514a582d5c136de1521e34e6f
+  config_var :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# "INFILE"#) -}
+0f37d9423b494716575d3f8a56837bfd
+  config_var1 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# "OUTFILE"#) -}
+5a50f183587ceac3a8f45122a0d37948
+  infile :: Main.Config -> GHC.IO.FilePath
+  RecSel Left Main.Config
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.Config) ->
+                 case ds of wild { Main.Config ds1 ds2 ds3 -> ds3 }) -}
+b7cc6f074f3a99da8d123709443543c6
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+d5d52816d26d00cb02cfc8f78fa56a8d
+  main' :: Main.Config -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,U(1*U,1*U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main2
+                  `cast`
+                (<Main.Config>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+5bfcf01acffc4a1254c2e354e86afd0d
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case System.Environment.getArgs1 s of ds { (#,#) ipv ipv1 ->
+                 case Options.Applicative.Extra.customExecParser2
+                        @ Main.Config
+                        (Options.Applicative.Extra.execParserPure
+                           @ Main.Config
+                           Options.Applicative.Builder.defaultPrefs
+                           Main.main3
+                           ipv1)
+                        ipv of ds1 { (#,#) ipv2 ipv3 ->
+                 Main.main2 ipv3 ipv2 } }) -}
+3ad370dd2c028df9afe5c8747c65fb0e
+  main10 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+2572d0aaa58609446d62c2d74ade12f5
+  main2 ::
+    Main.Config
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,U(1*U,1*U,U)><S,U> -}
+2ebf416b9dce86056db19413d92fcb44
+  main3 :: Options.Applicative.Types.ParserInfo Main.Config
+  {- Unfolding: (Options.Applicative.Types.ParserInfo
+                   @ Main.Config
+                   Main.main8
+                   GHC.Types.True
+                   Main.main6
+                   Main.main4
+                   (GHC.Base.Nothing @ Text.PrettyPrint.ANSI.Leijen.Doc)
+                     `cast`
+                   (Sym (Options.Applicative.Help.Chunk.N:Chunk[0]) <Text.PrettyPrint.ANSI.Leijen.Doc>_N)
+                   Options.Applicative.Builder.info1
+                   GHC.Types.True) -}
+fd0a255f514d44f9da0724c3f99aaaae
+  main4 ::
+    Options.Applicative.Help.Chunk.Chunk
+      Text.PrettyPrint.ANSI.Leijen.Doc
+  {- Unfolding: (Data.OldList.wordsFB
+                   @ (Options.Applicative.Help.Chunk.Chunk
+                        Text.PrettyPrint.ANSI.Leijen.Doc)
+                   Options.Applicative.Help.Chunk.paragraph1
+                   (GHC.Base.Nothing @ Text.PrettyPrint.ANSI.Leijen.Doc)
+                     `cast`
+                   (Sym (Options.Applicative.Help.Chunk.N:Chunk[0]) <Text.PrettyPrint.ANSI.Leijen.Doc>_N)
+                   Main.main5) -}
+00c42d272f7e7e62bc9b36933b44bab3
+  main5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "md2html"#) -}
+d8b714f40e8f45bab567fb22fcc6f434
+  main6 ::
+    Options.Applicative.Help.Chunk.Chunk
+      Text.PrettyPrint.ANSI.Leijen.Doc
+  {- Unfolding: (Data.OldList.wordsFB
+                   @ (Options.Applicative.Help.Chunk.Chunk
+                        Text.PrettyPrint.ANSI.Leijen.Doc)
+                   Options.Applicative.Help.Chunk.paragraph1
+                   (GHC.Base.Nothing @ Text.PrettyPrint.ANSI.Leijen.Doc)
+                     `cast`
+                   (Sym (Options.Applicative.Help.Chunk.N:Chunk[0]) <Text.PrettyPrint.ANSI.Leijen.Doc>_N)
+                   Main.main7) -}
+d511ff8eecc3730cbb610f8b375b70e0
+  main7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Markdown-To-HTML-Compiler"#) -}
+6be0d16d3a3ee1ab65a1e82883577e51
+  main8 :: Options.Applicative.Types.Parser Main.Config
+  {- Unfolding: (Options.Applicative.Types.MultP
+                   @ Main.Config
+                   @ (Main.Config -> Main.Config)
+                   Main.main9
+                   (Options.Applicative.Extra.helper @ Main.Config)) -}
+6960eb851c45a69a01b0510c393d2f4e
+  main9 ::
+    Options.Applicative.Types.Parser
+      ((Main.Config -> Main.Config) -> Main.Config)
+  {- Unfolding: (Options.Applicative.Types.$fApplicativeParser_$cfmap
+                   @ Main.Config
+                   @ ((Main.Config -> Main.Config) -> Main.Config)
+                   (GHC.Base.<**>1 @ Main.Config @ Main.Config)
+                   Main.config) -}
+0a0c4b03215d73067f1baf2269b0bf56
+  optCommand :: Main.Config -> Main.Command
+  RecSel Left Main.Config
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.Config) ->
+                 case ds of wild { Main.Config ds1 ds2 ds3 -> ds1 }) -}
+4c6003158779556b094c45e73fd69a19
+  outfile :: Main.Config -> GHC.Base.Maybe GHC.IO.FilePath
+  RecSel Left Main.Config
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.Config) ->
+                 case ds of wild { Main.Config ds1 ds2 ds3 -> ds2 }) -}
+4db26910edf8057d64cfb1cc4fb39677
+  stdoutOrFile :: Main.Config -> GHC.Base.String -> GHC.Types.IO ()
+  {- Arity: 3, Strictness: <S(LSL),1*U(A,1*U,A)><L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.stdoutOrFile1
+                  `cast`
+                (<Main.Config>_R
+                 ->_R <GHC.Base.String>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+de4a689a8c7eb163ef60a8c14ae86457
+  stdoutOrFile1 ::
+    Main.Config
+    -> GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <S(LSL),1*U(A,1*U,A)><L,U><S,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (config46 :: Main.Config)
+                   (output :: GHC.Base.String)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case config46 of wild { Main.Config ds ds1 ds2 ->
+                 case ds1 of wild1 {
+                   GHC.Base.Nothing
+                   -> GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        output
+                        GHC.Types.True
+                        eta
+                   GHC.Base.Just x -> System.IO.writeFile1 x output eta } }) -}
+instance [safe] GHC.Classes.Eq [Main.Command] = Main.$fEqCommand
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

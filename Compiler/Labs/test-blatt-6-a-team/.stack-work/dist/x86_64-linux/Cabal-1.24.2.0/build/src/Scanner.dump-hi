@@ -1,0 +1,65 @@
+
+==================== FINAL INTERFACE ====================
+2017-06-13 14:45:35.158769 UTC
+
+interface md2html-0.1.0.0-262ulUAMmGV5hmWW08dDOC:Scanner 8002
+  interface hash: e58643f2ab9c43f8aa7e15fd4c5627d9
+  ABI hash: b65aa42cd0131490c3cf97ce7e947641
+  export-list hash: b4e9d040e34a0dd64b05d0d4ed22e639
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: ab396f11155bd696ab63895436e6f1df
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Scanner.scan
+module dependencies: Types
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Control.Applicative 32430a90492e727f4bd80db71c28600c
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:Data.Functor 5ab1dc703df5b482e77efb697833ca3c
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  Types a4aadad097f3b3ee195b8dc6aaebddac
+  exports: edaa219d4149fe982457d09e42137579
+  Token 7ba609b3d7264d1cdf4aff870a792ae2
+  TokenBlanks 28bc52bac46a605c376c65c3f753f29f
+  TokenH 983b32b2cdd62678e0dd13b574a3079c
+  TokenNewline 72977c0898ccf2abef92b32833a17d67
+  TokenStars 128d8d1b0042f529699b261a6fc73286
+  TokenText 7bb5d39b5cde61e5acd10da202af371d
+6110e40cd92ae297022177f7477428fc
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Scanner.$trModule2
+                   Scanner.$trModule1) -}
+b6f1133fbbc816e4d94f41f3abe86a6c
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Scanner"#) -}
+5836003650798019df67df61214fe85d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "md2html-0.1.0.0-262ulUAMmGV5hmWW08dDOC"#) -}
+0c2f459a0f461e9d39361a1b8dfe1e25
+  scan :: GHC.Base.String -> GHC.Base.Maybe [Types.Token]
+  {- Arity: 1, Strictness: <S,1*U> -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

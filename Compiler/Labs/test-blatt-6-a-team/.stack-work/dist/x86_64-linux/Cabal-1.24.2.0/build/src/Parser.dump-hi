@@ -1,0 +1,76 @@
+
+==================== FINAL INTERFACE ====================
+2017-06-13 15:14:32.916869 UTC
+
+interface md2html-0.1.0.0-262ulUAMmGV5hmWW08dDOC:Parser 8002
+  interface hash: 6e4d6df9af6d13921ab9e156074e2634
+  ABI hash: 25f3ad8ac5a84876dee81caf6d418749
+  export-list hash: e94675a6bf544826a288ec3de5031069
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: ab396f11155bd696ab63895436e6f1df
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Parser.parse
+module dependencies: Types
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Control.Applicative 32430a90492e727f4bd80db71c28600c
+import  -/  base-4.9.1.0:Data.Functor 5ab1dc703df5b482e77efb697833ca3c
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  Types a4aadad097f3b3ee195b8dc6aaebddac
+  exports: edaa219d4149fe982457d09e42137579
+  AST 3b291832132f8f3a9e635d76e221ee58
+  Emphasis 5c97ff68a5d448452969ca7f422e07f5
+  Emptyline 828c33eb6ee5c0b406b6d94f7f3cb2bc
+  H 37935c47a205371a91680dfa39c68b63
+  P e846a1f8788ef95ec122d3f7eb21eba1
+  Sequence 44b73ff0c5ed1d2b86f82d5e6b837146
+  Strong 6471dfb9cfe12ef2c5b75d7ea37c8d82
+  Text be673802c2e85a267f897e4541767e51
+  Token 7ba609b3d7264d1cdf4aff870a792ae2
+  TokenBlanks 28bc52bac46a605c376c65c3f753f29f
+  TokenEmptyline 0792411221aa1fbac3d984b6a45cc28a
+  TokenH 983b32b2cdd62678e0dd13b574a3079c
+  TokenNewline 72977c0898ccf2abef92b32833a17d67
+  TokenStars 128d8d1b0042f529699b261a6fc73286
+  TokenText 7bb5d39b5cde61e5acd10da202af371d
+5b50a8d3366f506579de066895c4984f
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Parser.$trModule2
+                   Parser.$trModule1) -}
+42aee4c165b9884eb20d27660f43a84f
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Parser"#) -}
+9eb88c28fd7d00ebf4a6016dfeea554c
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "md2html-0.1.0.0-262ulUAMmGV5hmWW08dDOC"#) -}
+1beaf7dea539c902f292f2cd770ee5ed
+  parse :: [Types.Token] -> GHC.Base.Maybe Types.AST
+  {- Arity: 1, Strictness: <S,1*U> -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
